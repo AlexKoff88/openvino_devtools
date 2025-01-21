@@ -10,7 +10,7 @@ def main():
     model_path = sys.argv[1]
     core = ov.Core()
     model = core.read_model(model_path)
-    print(ov2py(model, with_node_names=True, path_to_source_model=model_path, entry_point=True), '\n')
+    print(ov2py(model, with_node_names=False, path_to_source_model=model_path, entry_point=True), '\n')
 
 if __name__ == "__main__":
     main()
